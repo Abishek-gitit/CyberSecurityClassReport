@@ -1,0 +1,82 @@
+Cybersecurity Class – Day 2: Mac Setup Journal
+
+Title: Kali on Mac – A Beginner’s Journey into the Lab World
+
+
+
+If Day 1 was about understanding hackers and how they operate, Day 2 was when we got our hands moving. The goal: get Kali Linux up and running on a Mac, not just watching a tutorial but actually setting up a real virtual lab — something we’ll keep using throughout this cybersecurity course.
+
+So here’s how the whole process went down — with all the hiccups, discoveries, and workarounds included. If you’re using macOS, read this like a trail guide.
+
+
+
+The Ingredients (Tools Needed)
+
+Before diving in, I had to gather three essential tools:
+	1.	Kali Linux VirtualBox Image – Comes in a .7z compressed file.
+Link: kali-linux-2025.2-virtualbox-amd64.7z
+	2.	Oracle VirtualBox for macOS – The virtualization platform we’ll run Kali on.
+Link: VirtualBox Download Page
+	3.	The Unarchiver (Mac’s version of 7-Zip) – Needed to unpack .7z files on macOS.
+Link: https://theunarchiver.com
+
+Bonus Tip: Make sure you’ve got at least 15 GB of free disk space. I had around 10 GB and it felt tight.
+
+
+
+The Adventure Begins
+
+Step 1: Installing Oracle VirtualBox (macOS version)
+
+I grabbed the .dmg file from the official VirtualBox site and opened it like any other Mac installer. The installation was mostly smooth — until macOS threw up a red flag saying “System Extension Blocked.”
+
+Solution:
+Went to System Preferences > Security & Privacy, clicked the Allow button next to “Oracle America, Inc.” and ran the installer again. That worked.
+
+One weird thing — on M1/M2 (Apple Silicon) Macs, VirtualBox isn’t officially supported. I’m on an Intel Mac, so I didn’t face that issue. If you’re using Apple Silicon, check out UTM or Parallels Desktop instead.
+
+
+
+Step 2: Installing The Unarchiver
+
+Kali’s VirtualBox image comes in a .7z file, which Finder can’t open by default. I downloaded The Unarchiver from the Mac App Store. Super lightweight and gets the job done.
+	•	After installing, I just double-clicked the .7z file.
+	•	It unpacked everything into a new folder in the same location — no drama.
+
+Inside the folder, I found two key files:
+	•	A .vbox file (machine definition)
+	•	A .vdi file (virtual disk)
+
+
+
+Step 3: Booting Kali for the First Time
+
+I double-clicked the .vbox file. That automatically opened VirtualBox and added Kali to the VM list.
+
+From there:
+	•	I clicked Start.
+	•	The boot took a minute or so (normal for first-time setup).
+	•	Got to the login screen.
+
+Username: kali
+Password: kali
+
+Logged in — and boom! Full Kali Linux desktop running on my Mac. Felt like entering a new world.
+
+
+
+Things That Could Go Wrong (and How I Avoided Them)
+	•	Virtualization Must Be Enabled:
+On macOS, Intel virtualization (VT-x) is usually enabled by default. I didn’t have to mess with BIOS like Windows users do.
+	•	Permissions Issue:
+macOS can be annoying with security prompts. Just keep checking Security & Privacy settings after every system-level install.
+	•	Performance Tip:
+I allocated 2 CPUs and 4 GB RAM to Kali in VirtualBox’s settings. It helped with smoother performance.
+
+
+
+What I Took Away From This Session
+
+Today wasn’t about hacking tools or exploits — it was about building the arena where all of that will happen. Now that Kali is running inside VirtualBox, I have a safe, isolated space to explore cybersecurity techniques without risking my actual system.
+
+It’s kind of cool how much setting up this environment already made me feel like I’m part of this world. There’s something different about running your own VM and seeing Kali boot up for the first time — way better than watching a YouTube tutorial.
